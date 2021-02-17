@@ -5,9 +5,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 // SCREENS
 import Splash from '../components/Splash';
 import Login from '../auth/Login';
-import Dashboard from '../Dashboard';
 import Register from '../auth/Register';
 import Recovery from '../auth/Recovery';
+import Dashboard from '../Dashboard';
 
 const Stack = createStackNavigator();
 

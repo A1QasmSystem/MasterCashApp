@@ -53,7 +53,7 @@ class Login extends Component {
     return (
       <View style={{flex: 1}}>
         <ImageBackground
-          source={require('../assets/login/green.png')}
+          source={require('../assets/login/wood.png')}
           style={styles.mainView}>
           <View style={styles.viewLogin}>
             {/* <Text style={styles.text}> Login </Text> */}
@@ -84,12 +84,14 @@ class Login extends Component {
             <View style={styles.textRegister}>
               <TouchableOpacity
                 style={{flexDirection: 'row'}}
-                onPress={() => this.props.navigation.replace('Recovery')}>
+                onPress={() => this.props.navigation.navigate('Recovery')}>
                 <Text style={styles.subText}>Forgot Password?</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={{flexDirection: 'row'}}
-                onPress={() => this.props.navigation.replace('Register')}>
+                onPress={() => {
+                  this.props.navigation.navigate('Register');
+                }}>
                 <Text style={styles.subText}>Sign up</Text>
               </TouchableOpacity>
             </View>
