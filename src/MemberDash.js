@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, ImageBackground, Image} from 'react-native';
 
-export default class Dashboard extends Component {
+export default class MemberDash extends Component {
   render() {
     return (
       <View style={{flex: 1}}>

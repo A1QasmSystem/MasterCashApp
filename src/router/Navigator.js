@@ -7,7 +7,9 @@ import Splash from '../components/Splash';
 import Login from '../auth/Login';
 import Register from '../auth/Register';
 import Recovery from '../auth/Recovery';
-import Dashboard from '../Dashboard';
+import MemberDash from '../MemberDash';
+import CashierDash from '../Cashier/CashierDash';
+import Profile from '../User/Profile';
 
 const Stack = createStackNavigator();
 
@@ -17,9 +19,11 @@ const Navigator = () => {
       <Stack.Navigator headerMode={false}>
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Recovery" component={Recovery} />
+        <Stack.Screen name="MemberDash" component={MemberDash} />
+        <Stack.Screen name="CashierDash" component={CashierDash} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );
