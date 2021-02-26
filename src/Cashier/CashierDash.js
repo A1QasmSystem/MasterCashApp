@@ -144,48 +144,48 @@ export default class CashierDash extends Component {
               <Text style={styles.headerText}>Dashboard</Text>
             </View>
             <View style={styles.category}>
-              <View style={styles.textContainer}>
+              <TouchableOpacity style={styles.textContainer}>
                 <Image
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text>Disini Text</Text>
-              </View>
-              <View style={styles.textContainer}>
+                <Text style={styles.categoryText}>Sale</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.textContainer}>
                 <Image
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text>Disini Text</Text>
-              </View>
-              <View style={styles.textContainer}>
+                <Text style={styles.categoryText}>Transaction</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.textContainer}>
                 <Image
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text>Disini Text</Text>
-              </View>
-              <View style={styles.textContainer}>
+                <Text style={styles.categoryText}>Inventory</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.textContainer}>
                 <Image
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text>Disini Text</Text>
-              </View>
-              <View style={styles.textContainer}>
+                <Text style={styles.categoryText}>Members</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.textContainer}>
                 <Image
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text>Disini Text</Text>
-              </View>
-              <View style={styles.textContainer}>
+                <Text style={styles.categoryText}>Category</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.textContainer}>
                 <Image
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text>Disini Text</Text>
-              </View>
+                <Text style={styles.categoryText}>Report</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -225,6 +225,16 @@ const styles = StyleSheet.create({
     // color: 'white',
     fontSize: 20,
     fontWeight: 'bold',
+    // marginHorizontal: 20,
+    // marginVertical: 15,
+    flex: 1,
+  },
+  categoryText: {
+    // color: 'white',
+    fontSize: 17,
+    fontWeight: 'bold',
+    marginLeft: '10%',
+    marginTop: 10,
     // marginHorizontal: 20,
     // marginVertical: 15,
     flex: 1,

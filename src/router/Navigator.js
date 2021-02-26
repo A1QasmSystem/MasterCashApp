@@ -10,6 +10,8 @@ import Recovery from '../auth/Recovery';
 import MemberDash from '../MemberDash';
 import CashierDash from '../Cashier/CashierDash';
 import Profile from '../User/Profile';
+import ListMember from '../Member/ListMember';
+import AddMember from '../Member/AddMember';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +26,8 @@ const Navigator = () => {
         <Stack.Screen name="MemberDash" component={MemberDash} />
         <Stack.Screen name="CashierDash" component={CashierDash} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="ListMember" component={ListMember} />
+        <Stack.Screen name="AddMember" component={AddMember} />
       </Stack.Navigator>
     </NavigationContainer>
   );
