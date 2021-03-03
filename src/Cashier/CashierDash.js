@@ -149,7 +149,7 @@ export default class CashierDash extends Component {
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text style={styles.categoryText}>Sale</Text>
+                <Text style={styles.categoryText}>Category</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.textContainer}>
                 <Image
@@ -163,7 +163,7 @@ export default class CashierDash extends Component {
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text style={styles.categoryText}>Inventory</Text>
+                <Text style={styles.categoryText}>Isi Saldo</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.textContainer}>
                 <Image
@@ -177,7 +177,7 @@ export default class CashierDash extends Component {
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text style={styles.categoryText}>Category</Text>
+                <Text style={styles.categoryText}>Sold out</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.textContainer}>
                 <Image
