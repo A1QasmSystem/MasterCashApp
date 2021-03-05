@@ -119,10 +119,21 @@ import {
   ImageBackground,
   TouchableOpacity,
   ScrollView,
+  TextInput,
 } from 'react-native';
 // import CheckBox from '@react-native-community/checkbox';
 
 export default class CashierDash extends Component {
+  constructor() {
+    super();
+    this.state = {
+      modal: false,
+      angka: 1,
+      ket: '',
+      loading: false,
+      token: '',
+    };
+  }
   render() {
     return (
       <View style={{flex: 1}}>
@@ -153,52 +164,8 @@ export default class CashierDash extends Component {
               />
               <Text style={styles.headerText}>Dashboard</Text>
             </View> */}
-              <View style={styles.category}>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../../assets/snacks.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Makanan</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../../assets/softdrinks.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Minuman</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../../assets/electronics.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Elektronik</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../../assets/sneakers.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Sepatu</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../../assets/male-clothes.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pakaian</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../../assets/watch.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Aksesories</Text>
-                </TouchableOpacity>
-              </View>
 
-              <View style={styles.listContainer}>
+              {/* <View style={styles.listContainer}>
                 <TouchableOpacity
                   style={{
                     // backgroundColor: 'blue',
@@ -206,6 +173,26 @@ export default class CashierDash extends Component {
                     width: 30,
                     height: 30,
                     borderWidth: 3,
+                  }}
+                />
+                <View>
+                  <Text style={styles.listText}>Teh Picik</Text>
+                  <Text style={styles.qtyText}>Qty: 98</Text>
+                </View>
+                <Text style={styles.hargaText}>$500</Text>
+              </View> */}
+              <View style={styles.listContainer}>
+                <TouchableOpacity
+                  style={{
+                    // backgroundColor: 'blue',
+                    marginLeft: 10,
+                    marginBottom: 15,
+                    width: 80,
+                    height: 80,
+                    borderWidth: 3,
+                    // alignItems: 'center',
+                    // alignContent: 'center',
+                    alignSelf: 'center',
                   }}
                 />
                 {/* <Image
@@ -216,36 +203,30 @@ export default class CashierDash extends Component {
                   <Text style={styles.listText}>Teh Picik</Text>
                   <Text style={styles.qtyText}>Qty: 98</Text>
                 </View>
-                <Text style={styles.hargaText}>$500</Text>
-              </View>
-
-              <View
-                style={{
-                  width: '100%',
-                  backgroundColor: 'black',
-                  height: 1,
-                }}
-              />
-
-              <View style={styles.listContainer}>
+                <Text style={styles.listText}>$500</Text>
                 <TouchableOpacity
                   style={{
                     // backgroundColor: 'blue',
-                    marginLeft: 5,
-                    width: 30,
+                    marginLeft: -25,
+                    borderRadius: 8,
+                    width: 50,
                     height: 30,
+                    marginTop: 40,
                     borderWidth: 3,
-                  }}
-                />
-                {/* <Image
-                  source={require('../../assets/watch.png')}
-                  style={styles.listIcon}
-                /> */}
-                <View>
-                  <Text style={styles.listText}>Teh Picik</Text>
-                  <Text style={styles.qtyText}>Qty: 98</Text>
-                </View>
-                <Text style={styles.hargaText}>$500</Text>
+                    backgroundColor: '#00264b',
+                  }}>
+                  <Text
+                    style={{
+                      alignContent: 'center',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      alignSelf: 'center',
+                      fontWeight: 'bold',
+                      color: 'white',
+                    }}>
+                    Add
+                  </Text>
+                </TouchableOpacity>
               </View>
 
               <View
@@ -260,10 +241,14 @@ export default class CashierDash extends Component {
                 <TouchableOpacity
                   style={{
                     // backgroundColor: 'blue',
-                    marginLeft: 5,
-                    width: 30,
-                    height: 30,
+                    marginLeft: 10,
+                    marginBottom: 15,
+                    width: 80,
+                    height: 80,
                     borderWidth: 3,
+                    // alignItems: 'center',
+                    // alignContent: 'center',
+                    alignSelf: 'center',
                   }}
                 />
                 {/* <Image
@@ -274,7 +259,30 @@ export default class CashierDash extends Component {
                   <Text style={styles.listText}>Teh Picik</Text>
                   <Text style={styles.qtyText}>Qty: 98</Text>
                 </View>
-                <Text style={styles.hargaText}>$500</Text>
+                <Text style={styles.listText}>$500</Text>
+                <TouchableOpacity
+                  style={{
+                    // backgroundColor: 'blue',
+                    marginLeft: -25,
+                    borderRadius: 8,
+                    width: 50,
+                    height: 30,
+                    marginTop: 40,
+                    borderWidth: 3,
+                    backgroundColor: '#00264b',
+                  }}>
+                  <Text
+                    style={{
+                      alignContent: 'center',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      alignSelf: 'center',
+                      fontWeight: 'bold',
+                      color: 'white',
+                    }}>
+                    Add
+                  </Text>
+                </TouchableOpacity>
               </View>
 
               <View
@@ -289,10 +297,14 @@ export default class CashierDash extends Component {
                 <TouchableOpacity
                   style={{
                     // backgroundColor: 'blue',
-                    marginLeft: 5,
-                    width: 30,
-                    height: 30,
+                    marginLeft: 10,
+                    marginBottom: 15,
+                    width: 80,
+                    height: 80,
                     borderWidth: 3,
+                    // alignItems: 'center',
+                    // alignContent: 'center',
+                    alignSelf: 'center',
                   }}
                 />
                 {/* <Image
@@ -303,7 +315,86 @@ export default class CashierDash extends Component {
                   <Text style={styles.listText}>Teh Picik</Text>
                   <Text style={styles.qtyText}>Qty: 98</Text>
                 </View>
-                <Text style={styles.hargaText}>$500</Text>
+                <Text style={styles.listText}>$500</Text>
+                <TouchableOpacity
+                  style={{
+                    // backgroundColor: 'blue',
+                    marginLeft: -25,
+                    borderRadius: 8,
+                    width: 50,
+                    height: 30,
+                    marginTop: 40,
+                    borderWidth: 3,
+                    backgroundColor: '#00264b',
+                  }}>
+                  <Text
+                    style={{
+                      alignContent: 'center',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      alignSelf: 'center',
+                      fontWeight: 'bold',
+                      color: 'white',
+                    }}>
+                    Add
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
+              <View
+                style={{
+                  width: '100%',
+                  backgroundColor: 'black',
+                  height: 1,
+                }}
+              />
+
+              <View style={styles.listContainer}>
+                <TouchableOpacity
+                  style={{
+                    // backgroundColor: 'blue',
+                    marginLeft: 10,
+                    marginBottom: 15,
+                    width: 80,
+                    height: 80,
+                    borderWidth: 3,
+                    // alignItems: 'center',
+                    // alignContent: 'center',
+                    alignSelf: 'center',
+                  }}
+                />
+                {/* <Image
+                  source={require('../../assets/watch.png')}
+                  style={styles.listIcon}
+                /> */}
+                <View>
+                  <Text style={styles.listText}>Teh Picik</Text>
+                  <Text style={styles.qtyText}>Qty: 98</Text>
+                </View>
+                <Text style={styles.listText}>$500</Text>
+                <TouchableOpacity
+                  style={{
+                    // backgroundColor: 'blue',
+                    marginLeft: -25,
+                    borderRadius: 8,
+                    width: 50,
+                    height: 30,
+                    marginTop: 40,
+                    borderWidth: 3,
+                    backgroundColor: '#00264b',
+                  }}>
+                  <Text
+                    style={{
+                      alignContent: 'center',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      alignSelf: 'center',
+                      fontWeight: 'bold',
+                      color: 'white',
+                    }}>
+                    Add
+                  </Text>
+                </TouchableOpacity>
               </View>
 
               <View
@@ -455,7 +546,7 @@ const styles = StyleSheet.create({
     // color: 'white',
     fontSize: 17,
     fontWeight: 'bold',
-    marginLeft: '35%',
+    marginLeft: '20%',
     // alignItems: 'center',
     // alignContent: 'center',
     // alignSelf: 'stretch',
@@ -553,7 +644,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     width: '94%',
-    height: 60,
+    height: 100,
     backgroundColor: '#bbe1fd',
     paddingTop: '5%',
     // margin: 10,

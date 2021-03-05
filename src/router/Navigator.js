@@ -13,6 +13,7 @@ import Profile from '../User/Profile';
 import ListMember from '../Member/ListMember';
 import AddMember from '../Member/AddMember';
 import CategoryBarang from '../Category/CategoryBarang';
+import DaftarBarang from '../Category/DaftarBarang';
 // import AddMember from '../Member/AddMember';
 
 const Stack = createStackNavigator();
@@ -31,6 +32,7 @@ const Navigator = () => {
         <Stack.Screen name="ListMember" component={ListMember} />
         <Stack.Screen name="AddMember" component={AddMember} />
         <Stack.Screen name="CategoryBarang" component={CategoryBarang} />
+        <Stack.Screen name="DaftarBarang" component={DaftarBarang} />
         {/* <Stack.Screen name="AddMember" component={AddMember} /> */}
       </Stack.Navigator>
     </NavigationContainer>

@@ -177,7 +177,7 @@ export default class CashierDash extends Component {
                   source={require('../assets/city-buildings-silhouette.png')}
                   style={styles.categoryIcon}
                 />
-                <Text style={styles.categoryText}>Sold out</Text>
+                <Text style={styles.categoryText}>Sale</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.textContainer}>
                 <Image
