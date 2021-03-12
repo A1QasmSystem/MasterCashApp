@@ -404,25 +404,6 @@ export default class CashierDash extends Component {
                   height: 1,
                 }}
               />
-
-              {/* <View style={styles.barangContainer}>
-                <CheckBox
-                  disabled={false}
-                  value={toggleCheckBox}
-                  onValueChange={(newValue) => setToggleCheckBox(newValue)}
-                />
-                <View style={styles.viewBarang}>
-                  <Image
-                    source={require('../../assets/watch.png')}
-                    style={styles.barangIcon}
-                  />
-                  <View>
-                    <Text style={styles.textBarang}>Harga:</Text>
-                    <Text style={styles.textBarang}>Quantity:</Text>
-                  </View>
-                </View>
-                <Text style={styles.categoryText}>Nama Barang</Text>
-              </View> */}
             </ScrollView>
           </View>
           <View style={styles.bottomContainer}>
@@ -579,17 +560,6 @@ const styles = StyleSheet.create({
     // marginVertical: 15,
     // flex: 1,
   },
-  // header: {
-  //   backgroundColor: '#4c9b8d',
-  //   alignItems: 'center',
-  // },
-  // headerBg1: {
-  //   paddingHorizontal: 15,
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   height: 50,
-  //   resizeMode: 'center',
-  // },
   headerView: {
     // color: 'white',
     fontSize: 20,
@@ -607,17 +577,6 @@ const styles = StyleSheet.create({
     // paddingTop: '20%',
     // flex: 1,
   },
-  // viewLogin1: {
-  //   width: '95%',
-  //   backgroundColor: '#cccccc',
-  //   elevation: 10,
-  //   borderRadius: 10,
-  //   // justifyContent: 'center',
-  //   // alignItems: 'center',
-  //   paddingTop: '5%',
-  //   flex: 2,
-  // },
-
   categoryContainer: {
     width: '30%',
     height: 50,

@@ -1,28 +1,4 @@
 // import React, {Component} from 'react';
-// import {Text, StyleSheet, View} from 'react-native';
-
-// export default class StaffDash extends Component {
-//   render() {
-//     return (
-//       <View style={{flex: 1}}>
-//         <View style={{backgroundColor: 'red', flex: 1}}>
-//           <Text> textInComponent </Text>
-//         </View>
-//         <View style={{backgroundColor: 'yellow', flex: 1}}>
-//           <Text> textInComponent </Text>
-//         </View>
-//         <View style={{backgroundColor: 'green', flex: 1}}>
-//           <Text> textInComponent </Text>
-//         </View>
-//       </View>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({});
-// ====================================================================================================================
-
-// import React, {Component} from 'react';
 // import {Text, StyleSheet, View, Image, ImageBackground} from 'react-native';
 
 // export default class CashierDash extends Component {
@@ -144,6 +120,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
+// import CheckBox from '@react-native-community/checkbox';
 
 export default class CashierDash extends Component {
   render() {
@@ -154,7 +131,7 @@ export default class CashierDash extends Component {
             <ScrollView>
               <View style={styles.headerBg}>
                 <Image
-                  source={require('../assets/sort-button-with-three-lines.png')}
+                  source={require('../../assets/sort-button-with-three-lines.png')}
                   style={styles.headerIcon}
                 />
                 <View style={styles.categoryContainer}>
@@ -162,10 +139,10 @@ export default class CashierDash extends Component {
                   source={require('../../assets/snacks.png')}
                   style={styles.categoryIcon}
                 /> */}
-                  <Text style={styles.categoryText}>Dashboard</Text>
+                  <Text style={styles.categoryText}>Pengeluaran</Text>
                 </View>
                 <Image
-                  source={require('../assets/round-account-button-with-user-inside.png')}
+                  source={require('../../assets/round-account-button-with-user-inside.png')}
                   style={styles.headerIconRight}
                 />
               </View>
@@ -176,118 +153,133 @@ export default class CashierDash extends Component {
               />
               <Text style={styles.headerText}>Dashboard</Text>
             </View> */}
-              <View style={styles.category}>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/inventory.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Inventory</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/grid.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Kategori</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/electronics.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pengeluaran</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/shopping-basket.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pembelian</Text>
-                </TouchableOpacity>
-                {/* <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/male-clothes.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pakaian</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/watch.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Aksesories</Text>
-                </TouchableOpacity> */}
-              </View>
-
-              <Text style={styles.categoryText}>Supplier</Text>
               <View style={styles.listContainer}>
-                {/* <TouchableOpacity
-                  style={{
-                    // backgroundColor: 'blue',
-                    marginLeft: 5,
-                    width: 30,
-                    height: 30,
-                    borderWidth: 3,
-                  }}></TouchableOpacity> */}
                 {/* <Image
                   source={require('../../assets/watch.png')}
                   style={styles.listIcon}
                 /> */}
                 <View>
-                  <Text style={styles.listText}>DepokMie</Text>
-                  <Text style={styles.qtyText}>08123456789</Text>
+                  <Text style={styles.listText}>Tanggal</Text>
+                  <Text style={styles.qtyText}>Listrik: $30</Text>
+                  <Text style={styles.qtyText}>Bensin: $60</Text>
                 </View>
-                <Text style={styles.hargaText}>Alamat</Text>
+                <Text
+                  style={{...styles.hargaText, textAlign: 'right', flex: 1}}>
+                  $500
+                </Text>
               </View>
 
+              <View
+                style={{
+                  width: '100%',
+                  backgroundColor: 'black',
+                  height: 1,
+                }}
+              />
+
               <View style={styles.listContainer}>
-                {/* <TouchableOpacity
-                  style={{
-                    // backgroundColor: 'blue',
-                    marginLeft: 5,
-                    width: 30,
-                    height: 30,
-                    borderWidth: 3,
-                  }}></TouchableOpacity> */}
                 {/* <Image
                   source={require('../../assets/watch.png')}
                   style={styles.listIcon}
                 /> */}
                 <View>
-                  <Text style={styles.listText}>JawaMie</Text>
-                  <Text style={styles.qtyText}>08123456789</Text>
+                  <Text style={styles.listText}>Tanggal</Text>
+                  <Text style={styles.qtyText}>Listrik: $30</Text>
+                  <Text style={styles.qtyText}>Bensin: $60</Text>
                 </View>
-                <Text style={styles.hargaText}>Alamat</Text>
+                <Text
+                  style={{...styles.hargaText, textAlign: 'right', flex: 1}}>
+                  $500
+                </Text>
               </View>
 
-              {/* <View style={styles.barangContainer}>
-                <CheckBox
-                  disabled={false}
-                  value={toggleCheckBox}
-                  onValueChange={(newValue) => setToggleCheckBox(newValue)}
-                />
-                <View style={styles.viewBarang}>
-                  <Image
-                    source={require('../../assets/watch.png')}
-                    style={styles.barangIcon}
-                  />
-                  <View>
-                    <Text style={styles.textBarang}>Harga:</Text>
-                    <Text style={styles.textBarang}>Quantity:</Text>
-                  </View>
+              <View
+                style={{
+                  width: '100%',
+                  backgroundColor: 'black',
+                  height: 1,
+                }}
+              />
+
+              <View style={styles.listContainer}>
+                {/* <Image
+                  source={require('../../assets/watch.png')}
+                  style={styles.listIcon}
+                /> */}
+                <View>
+                  <Text style={styles.listText}>Tanggal</Text>
+                  <Text style={styles.qtyText}>Listrik: $30</Text>
+                  <Text style={styles.qtyText}>Bensin: $60</Text>
                 </View>
-                <Text style={styles.categoryText}>Nama Barang</Text>
-              </View> */}
+                <Text
+                  style={{...styles.hargaText, textAlign: 'right', flex: 1}}>
+                  $500
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  width: '100%',
+                  backgroundColor: 'black',
+                  height: 1,
+                }}
+              />
+
+              <View style={styles.listContainer}>
+                {/* <Image
+                  source={require('../../assets/watch.png')}
+                  style={styles.listIcon}
+                /> */}
+                <View>
+                  <Text style={styles.listText}>Tanggal</Text>
+                  <Text style={styles.qtyText}>Listrik: $30</Text>
+                  <Text style={styles.qtyText}>Bensin: $60</Text>
+                </View>
+                <Text
+                  style={{...styles.hargaText, textAlign: 'right', flex: 1}}>
+                  $500
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  width: '100%',
+                  backgroundColor: 'black',
+                  height: 1,
+                }}
+              />
             </ScrollView>
           </View>
           <View style={styles.bottomContainer}>
             <View>
-              <Text style={styles.bottomText}>Rencana</Text>
-              <Text style={styles.totalText}>Rencana</Text>
+              <Text style={styles.bottomText}>Total Item: 10,</Text>
+              <Text style={styles.totalText}>Harga: $85</Text>
             </View>
-            <Text style={styles.chckText}>Rencana</Text>
+            <View
+              style={{
+                // backgroundColor: 'blue',
+                // marginRight: -50,
+                textAlign: 'right',
+                flex: 1,
+                width: 90,
+                // height: 25,
+                // borderWidth: 3,
+                // marginLeft: '30%',
+                marginTop: -15,
+                // borderRadius: 8,
+                // backgroundColor: 'blue',
+              }}>
+              <Text
+                style={{
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  alignSelf: 'center',
+                  fontWeight: 'bold',
+                  color: 'blue',
+                }}>
+                $2000
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -351,6 +343,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: 'bold',
     marginLeft: '10%',
+    marginRight: 100,
     // marginTop: 10,
     // marginHorizontal: 20,
     // marginVertical: 15,
@@ -381,7 +374,7 @@ const styles = StyleSheet.create({
     // color: 'white',
     fontSize: 17,
     fontWeight: 'bold',
-    marginLeft: '35%',
+    marginRight: '5%',
     // alignItems: 'center',
     // alignContent: 'center',
     // alignSelf: 'stretch',
@@ -434,7 +427,7 @@ const styles = StyleSheet.create({
   viewLogin: {
     width: '95%',
     height: '90%',
-    backgroundColor: '#f0f1f5',
+    backgroundColor: '#004c90',
     elevation: 10,
     borderRadius: 10,
     // justifyContent: 'center',
@@ -454,7 +447,7 @@ const styles = StyleSheet.create({
   // },
 
   categoryContainer: {
-    width: '30%',
+    width: '35%',
     height: 50,
     // backgroundColor: '#cccccc',
     // paddingTop: '5%',
@@ -466,7 +459,7 @@ const styles = StyleSheet.create({
     // paddingBottom: 10,
   },
   textContainer: {
-    width: '33%',
+    width: '30%',
     height: 90,
     backgroundColor: '#cccccc',
     paddingTop: '5%',
@@ -479,7 +472,8 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     width: '94%',
-    height: 60,
+    minHeight: 70,
+    // height: 60,
     backgroundColor: '#bbe1fd',
     paddingTop: '5%',
     // margin: 10,

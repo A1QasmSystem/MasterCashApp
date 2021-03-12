@@ -33,12 +33,12 @@
 //           <View style={styles.headerBg}>
 //             {/* <Text style={styles.headerText}>History</Text>
 //             <Image
-//               source={require('../assets/round-account-button-with-user-inside.png')}
+//               source={require('../../assets/round-account-button-with-user-inside.png')}
 //               style={styles.headerIcon}
 //             /> */}
 //           </View>
 //           <View
-//             // source={require('../assets/grafik.png')}
+//             // source={require('../../assets/grafik.png')}
 //             style={styles.viewLogin}>
 //             {/* <Text style={{paddingBottom: '2%'}}>Saldo</Text>
 //             <Text style={{paddingBottom: '50%'}}>Rp. 5.000.000,00,-</Text> */}
@@ -154,74 +154,30 @@ export default class CashierDash extends Component {
             <ScrollView>
               <View style={styles.headerBg}>
                 <Image
-                  source={require('../assets/sort-button-with-three-lines.png')}
+                  source={require('../../assets/sort-button-with-three-lines.png')}
                   style={styles.headerIcon}
                 />
                 <View style={styles.categoryContainer}>
                   {/* <Image
-                  source={require('../../assets/snacks.png')}
+                  source={require('../../../assets/snacks.png')}
                   style={styles.categoryIcon}
                 /> */}
-                  <Text style={styles.categoryText}>Dashboard</Text>
+                  <Text style={styles.categoryText}>Inventory</Text>
                 </View>
                 <Image
-                  source={require('../assets/round-account-button-with-user-inside.png')}
+                  source={require('../../assets/round-account-button-with-user-inside.png')}
                   style={styles.headerIconRight}
                 />
               </View>
               {/* <View style={styles.headerDash}>
               <Image
-                source={require('../../assets/city-buildings-silhouette.png')}
+                source={require('../../../assets/city-buildings-silhouette.png')}
                 style={styles.dashIcon}
               />
               <Text style={styles.headerText}>Dashboard</Text>
             </View> */}
-              <View style={styles.category}>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/inventory.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Inventory</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/grid.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Kategori</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/electronics.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pengeluaran</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/shopping-basket.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pembelian</Text>
-                </TouchableOpacity>
-                {/* <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/male-clothes.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Pakaian</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.textContainer}>
-                  <Image
-                    source={require('../assets/watch.png')}
-                    style={styles.categoryIcon}
-                  />
-                  <Text style={styles.categoryText}>Aksesories</Text>
-                </TouchableOpacity> */}
-              </View>
 
-              <Text style={styles.categoryText}>Supplier</Text>
+              <Text style={styles.categoryText}>Daftar Barang</Text>
               <View style={styles.listContainer}>
                 {/* <TouchableOpacity
                   style={{
@@ -232,14 +188,14 @@ export default class CashierDash extends Component {
                     borderWidth: 3,
                   }}></TouchableOpacity> */}
                 {/* <Image
-                  source={require('../../assets/watch.png')}
+                  source={require('../../../assets/watch.png')}
                   style={styles.listIcon}
                 /> */}
                 <View>
-                  <Text style={styles.listText}>DepokMie</Text>
-                  <Text style={styles.qtyText}>08123456789</Text>
+                  <Text style={styles.listText}>Nama Barang</Text>
+                  <Text style={styles.qtyText}>Qty: jumlah barang</Text>
                 </View>
-                <Text style={styles.hargaText}>Alamat</Text>
+                <Text style={styles.hargaText}>Harga Jual</Text>
               </View>
 
               <View style={styles.listContainer}>
@@ -252,14 +208,14 @@ export default class CashierDash extends Component {
                     borderWidth: 3,
                   }}></TouchableOpacity> */}
                 {/* <Image
-                  source={require('../../assets/watch.png')}
+                  source={require('../../../assets/watch.png')}
                   style={styles.listIcon}
                 /> */}
                 <View>
-                  <Text style={styles.listText}>JawaMie</Text>
-                  <Text style={styles.qtyText}>08123456789</Text>
+                  <Text style={styles.listText}>Nama Barang</Text>
+                  <Text style={styles.qtyText}>Qty: jumlah barang</Text>
                 </View>
-                <Text style={styles.hargaText}>Alamat</Text>
+                <Text style={styles.hargaText}>Harga Jual</Text>
               </View>
 
               {/* <View style={styles.barangContainer}>
@@ -270,7 +226,7 @@ export default class CashierDash extends Component {
                 />
                 <View style={styles.viewBarang}>
                   <Image
-                    source={require('../../assets/watch.png')}
+                    source={require('../../../assets/watch.png')}
                     style={styles.barangIcon}
                   />
                   <View>
@@ -377,11 +333,14 @@ const styles = StyleSheet.create({
     // flex: 1,
   },
   hargaText: {
+    textAlign: 'right',
+    flex: 1,
     marginTop: -9,
     // color: 'white',
     fontSize: 17,
     fontWeight: 'bold',
-    marginLeft: '35%',
+    // marginLeft: '35%',
+    marginRight: 10,
     // alignItems: 'center',
     // alignContent: 'center',
     // alignSelf: 'stretch',
